@@ -3,7 +3,7 @@ IP-Address based Country Redirect. The Extra uses the IP-API-Service of IPLocate
 
 
 # Usage
-So far 1,500 daily requests are free. If you need more request you can get yourself an API-Key at [APILocate](https://www.iplocate.io/) and set ist in the System-Settings:
+So far 1,500 daily requests are free. If you need more request you can get yourself an API-Key at [APILocate](https://www.iplocate.io/) and set it in the System-Settings:
 ## System Settings
 | setting | default | description |
 | --- | --- | --- |
@@ -38,6 +38,6 @@ Define all your country-codes in your contexts with the context-key `ipcr.countr
 Finished! Your user should be redirected to your defined contexts.
 
 ### Fallback
-By default the user gets redirectet to your default Context (System-Setting: `default_context`).
+By default the user gets redirectet to your Default-Context (System-Setting: `default_context`).
 If the Extra can't locate the user or the country is not defined in any context: The extra will redirect to your default context.
-Make shure your default context is not the same context as your redirect context.
+Make shure your Default-Context is not the same context as your Root-Context.

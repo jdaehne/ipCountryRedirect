@@ -8,7 +8,7 @@ So far 1,500 daily requests are free. If you need more request you can get yours
 | setting | default | description |
 | --- | --- | --- |
 | ipcr.apikey |  | Optional API-Key. Get your Key at [APILocate](https://www.iplocate.io/) |
-| ipcr.anonymizeip |  | Anonymize IP-Address (example: 203.0.113.195 -> 203.0.113.0) |
+| ipcr.anonymizeip | false | Anonymize IP-Address (example: 203.0.113.195 -> 203.0.113.0) |
 
 Now just define the country-codes in the context you want the user to be redirected to:
 ## Context Settings

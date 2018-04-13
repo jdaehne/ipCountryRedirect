@@ -16,7 +16,7 @@ $components = array(
     'packageName' => 'ipcountryredirect',  /* No spaces, no dashes */
     'packageNameLower' => $packageNameLower,
     'packageDescription' => 'IP based country redirect',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'release' => 'pl',
     'author' => 'Quadro - Jan Dähne',
     'email' => '<https://www.quadro-system.de>',
@@ -63,7 +63,16 @@ $components = array(
             'namespace' => 'ipcountryredirect',
             'xtype' => 'textfield',
             'value' => '',
-            'area' => '',
+            'area' => 'API',
+        ),
+        'ipcountryredirect_system_setting2' => array( // key
+            'key' => 'ipcr.anonymizeip',
+            'name' => 'IP anonymize',
+            'description' => 'Anonymize IP-Address',
+            'namespace' => 'ipcountryredirect',
+            'xtype' => 'boolean',
+            'value' => '0',
+            'area' => 'Global Settings',
         ),
     ),
 

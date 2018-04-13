@@ -35,4 +35,14 @@ $systemSettings[1]->fromArray(array (
   'name' => 'API-Key',
   'description' => 'Optional API-Key. Get your Key at: <a href="https://www.iplocate.io/" target="_blank">https://www.iplocate.io/</a>',
 ), '', true, true);
+$systemSettings[2] = $modx->newObject('modSystemSetting');
+$systemSettings[2]->fromArray(array (
+  'key' => 'ipcr.anonymizeip',
+  'value' => '0',
+  'xtype' => 'combo-boolean',
+  'namespace' => 'ipcountryredirect',
+  'area' => 'Global Settings',
+  'name' => 'IP anonymize',
+  'description' => 'Anonymize IP-Address',
+), '', true, true);
 return $systemSettings;

@@ -8,7 +8,6 @@
  * @author Jan Dähne, Quadro <jan.daehne@quadro-system.de>
  */
 
-
 class ipCountryRedirect {
 
 
@@ -25,6 +24,7 @@ class ipCountryRedirect {
 
         // system settings
         $this->apikey = $this->modx->getOption('ipcr.apikey');
+        $this->anonymizeip = $this->modx->getOption('ipcr.anonymizeip');
     }
 
 
@@ -48,7 +48,29 @@ class ipCountryRedirect {
         else
             $ipaddress = false;
 
+        // anonymize ip if set in system settings
+        if ($this->anonymizeip == true) {
+            $ipaddress = $this->anonymizeIP($ipaddress);
+        }
+
         return $ipaddress;
+    }
+
+
+
+    // anonymize ip
+    public function anonymizeIP($ipaddress) {
+        $packedAddress = inet_pton($ipaddress);
+        $ipv4NetMask = "255.255.255.0";
+        $ipv6NetMask = "ffff:ffff:ffff:ffff:0000:0000:0000:0000";
+
+        if (strlen($packedAddress) == 4) {
+            return inet_ntop(inet_pton($ipaddress) & inet_pton($ipv4NetMask));
+        } elseif (strlen($packedAddress) == 16) {
+            return inet_ntop(inet_pton($ipaddress) & inet_pton($ipv6NetMask));
+        }
+
+        return false;
     }
 
 

@@ -42,4 +42,6 @@ if (!$ipcr->redirectToContext($countryCode, $countries)) {
     return;
 }
 
+// redirect to default context
+$ipcr->redirectToDefaultContext();
 return;

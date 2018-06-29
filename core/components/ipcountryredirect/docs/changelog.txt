@@ -1,5 +1,10 @@
 Changelog for ipcountryredirect
 
+ipcountryredirect 1.0.2
+---------------------------------
++ Fix function to anonymize the IP-Address
+
+
 ipcountryredirect 1.0.1
 ---------------------------------
 + Add System Setting to anonymize the IP-Address

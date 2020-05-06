@@ -119,7 +119,7 @@ class ipCountryRedirect {
 
         $ctx = $this->modx->getContext($defaultContext);
         $rid = $ctx->getOption('site_start', null, 'default');
-        $url = $this->modx->makeUrl($rid);
+        $url = $this->modx->makeUrl($rid, '', array('cc' => 'default'));
         $this->modx->sendRedirect($url);
     }
 
